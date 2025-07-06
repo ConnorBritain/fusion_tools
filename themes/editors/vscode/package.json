@@ -1,0 +1,37 @@
+{
+  "name": "fusion-health",
+  "displayName": "Fusion Health Theme",
+  "description": "Fusion Health–inspired dark & light colour themes for VS Code-based editors",
+  "version": "1.1.1",
+  "publisher": "connorengland",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#FE9D26",
+    "theme": "dark"
+  },
+
+  "engines": { "vscode": "^1.90.0" },
+  "categories": [ "Themes" ],
+  "keywords": [ "theme", "dark", "light", "health", "fusion" ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConnorBritain/fusion-tools.git"
+  },
+  "license": "MIT",
+
+  "contributes": {
+    "themes": [
+      {
+        "label": "Fusion Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/fusion-dark-color-theme.json"
+      },
+      {
+        "label": "Fusion Light",
+        "uiTheme": "vs",
+        "path": "./themes/fusion-light-color-theme.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,197 @@
+  /* ---------------------------------------------------------------------
+    Fusion Dark Obsidian Themes
+    © 2025 Fusion Health | FusionEHR.com
+    Author: Connor England, Technical Engineer
+    Version: 1.0.1
+
+    Distributed under the MIT License. You are free to copy, modify, and
+    redistribute this file within or outside Fusion Health. All Fusion Health,
+    Fusion EHR, and related product names, logos, and brand assets remain the
+    trademarks and copyrighted property of Fusion Health and may not be used
+    to imply endorsement without written permission.
+  ---------------------------------------------------------------------*/
+
+/* ─────────────────────────────────────────────────────────────
+   1) CORE PALETTE & VARIABLE DEFINITIONS
+───────────────────────────────────────────────────────────── */
+
+/* — LIGHT MODE VARIABLES — */
+.theme-light,
+.theme-light.minimal-light-contrast {
+  /* Brand colors */
+  --fusion-navy:         #003D6A;
+  --fusion-blue:         #1975B8;
+  --fusion-light-blue:   #5FA7D7;
+  --fusion-light-blue-light: #D8EFFC; /* new pale sky-blue */
+  --fusion-orange:       #F18A00;
+  --fusion-gray:         #F6F8FA;
+
+  /* Backgrounds & borders */
+  --background-primary:         var(--fusion-gray);
+  --background-secondary:       #FFFFFF;
+  --background-modifier-border: #E0E4E8;
+
+  /* Text */
+  --text-normal:  var(--fusion-navy);
+  --text-muted:   #4F6580;
+  --text-faint:   #778CA3;
+  --text-accent:  var(--fusion-blue);
+
+  /* Minimal accent HSL (widgets & buttons) */
+  --accent-h: 207;
+  --accent-s: 84%;
+  --accent-l: 44%;
+
+  /* Links & tags */
+  --link-color:     var(--fusion-blue);
+  --tag-background: hsl(var(--accent-h) var(--accent-s) 95%);
+
+  /* Callouts */
+  --callout-important:      var(--fusion-orange);
+
+  /* RGB helpers for opacity layers */
+  --fusion-light-blue-rgb:  95, 167, 215;
+  --fusion-orange-rgb:      241, 138,   0;
+}
+
+/* — DARK MODE VARIABLES — */
+.theme-dark,
+.theme-dark.minimal-dark-contrast {
+  --fusion-navy:         #00243F;
+  --fusion-blue:         #3D8AD1;
+  --fusion-light-blue:   #74B4E0;
+  --fusion-light-blue-light: #2E4F72; /* new muted steel-blue */
+  --fusion-orange:       #FF9A1F;
+  --fusion-gray:         #0E1B29;
+
+  --background-primary:         var(--fusion-gray);
+  --background-secondary:       #112742;
+  --background-modifier-border: #1E3551;
+
+  --text-normal:  #E7EDF4;
+  --text-muted:   #9BB6CF;
+  --text-faint:   #5F7F9E;
+  --text-accent:  var(--fusion-light-blue);
+
+  --accent-h: 207;
+  --accent-s: 72%;
+  --accent-l: 66%;
+
+  --link-color:     var(--fusion-light-blue);
+  --tag-background: hsl(var(--accent-h) var(--accent-s) 25% / 0.25);
+
+  --callout-important:      var(--fusion-orange);
+
+  --fusion-light-blue-rgb: 116, 180, 224;
+  --fusion-orange-rgb:     255, 154,  31;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   2) TYPICAL MINIMAL OVERRIDES & EXTRAS
+───────────────────────────────────────────────────────────── */
+
+/* Headings */
+.markdown-preview-view h1,
+.cm-header-1 { color: var(--fusion-orange); }
+.markdown-preview-view h2,
+.cm-header-2 { color: var(--fusion-blue); }
+
+/* Colourful checkboxes */
+input[type="checkbox"]:checked + .checklist-text {
+  color: var(--text-normal);
+  text-decoration-color: var(--fusion-orange);
+}
+
+/* Hyperlinks */
+.markdown-preview-view a,
+.cm-s-obsidian .cm-link {
+  color: var(--fusion-orange) !important;
+}
+.markdown-preview-view a:hover,
+.cm-s-obsidian .cm-link:hover {
+  text-decoration-color: var(--fusion-navy) !important;
+}
+
+/* Ribbon & titlebar */
+:root {
+  --ribbon-background:           var(--fusion-orange) !important;
+  --titlebar-background:         var(--fusion-orange) !important;
+  --titlebar-background-focused: var(--fusion-navy)    !important;
+}
+
+/* Call-to-action buttons (mod-cta) */
+button.mod-cta,
+.modal-button-container .mod-cta {
+  background-color: var(--fusion-orange) !important;
+  border-color:     var(--fusion-orange) !important;
+  color:            #fff             !important;
+}
+button.mod-cta:hover,
+.modal-button-container .mod-cta:hover {
+  background-color: var(--fusion-navy) !important;
+  border-color:     var(--fusion-navy) !important;
+}
+
+/* Interactive & hover states */
+.theme-light,
+.theme-dark {
+  --interactive-accent:        var(--fusion-orange);
+  --interactive-accent-hover:  rgba(var(--fusion-orange-rgb), 0.2);
+  --background-modifier-hover: rgba(var(--fusion-orange-rgb), 0.1);
+}
+
+/* Tab indicator (active tab underline) */
+.tab-header .tab-active,
+.workspace-tab-header.is-active {
+  border-bottom: 2px solid var(--fusion-orange) !important;
+}
+
+/* Important callouts */
+.callout[data-callout="important"] {
+  --callout-border-color: var(--fusion-orange);
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   3) NEW: LEFT-PANE & SIDEBAR SPLASHES
+───────────────────────────────────────────────────────────── */
+
+/* 3a) File-Explorer background tint */
+.theme-light .workspace-leaf[data-type="file-explorer"] {
+  background-color: rgba(var(--fusion-light-blue-rgb), 0.08) !important;
+}
+.theme-dark .workspace-leaf[data-type="file-explorer"] {
+  background-color: rgba(var(--fusion-orange-rgb), 0.08) !important;
+}
+
+/* 3b) Explorer-item hover & selection */
+.theme-light
+  .workspace-leaf[data-type="file-explorer"] .tree-item:hover {
+  background-color: rgba(var(--fusion-light-blue-rgb), 0.12) !important;
+}
+.theme-dark
+  .workspace-leaf[data-type="file-explorer"] .tree-item:hover {
+  background-color: rgba(var(--fusion-orange-rgb), 0.12) !important;
+}
+
+.theme-light
+  .workspace-leaf[data-type="file-explorer"] .tree-item.is-active {
+  background-color: rgba(var(--fusion-light-blue-rgb), 0.18) !important;
+}
+.theme-dark
+  .workspace-leaf[data-type="file-explorer"] .tree-item.is-active {
+  background-color: rgba(var(--fusion-orange-rgb), 0.18) !important;
+}
+
+/* 3c) Left Dock (icons) – hover & active states */
+.theme-light .workspace-dock.mod-left .workspace-actionable:hover,
+.theme-light .workspace-dock.mod-left .workspace-actionable.is-active {
+  background-color: rgba(var(--fusion-light-blue-rgb), 0.15) !important;
+  color: var(--fusion-light-blue) !important;
+}
+.theme-dark .workspace-dock.mod-left .workspace-actionable:hover,
+.theme-dark .workspace-dock.mod-left .workspace-actionable.is-active {
+  background-color: rgba(var(--fusion-orange-rgb), 0.15) !important;
+  color: var(--fusion-orange) !important;
+} 
