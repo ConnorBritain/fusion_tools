@@ -1,9 +1,16 @@
 # Fusion Health Theme
 
-**One palette – three editors**  *VS Code · Cursor · Windsurf*
+**One palette – three editors**  
+*VS Code · Cursor · Windsurf*
 
 Fusion Health Theme delivers a clinically‑calibrated **dark & light** colour pair.\
 Publish it once to the VS Code Marketplace and it works instantly in Cursor and Windsurf (both consume the same extension feed).
+
+Download the theme [here](https://marketplace.visualstudio.com/items?itemName=connorengland.fusion-health)!
+
+---
+
+### Previews
 
 ![Fusion Dark Theme Preview](images/preview-dark.png)
 ![Fusion Light Theme Preview](images/preview-light.png)
@@ -27,6 +34,10 @@ Publish it once to the VS Code Marketplace and it works instantly in Cursor and 
 > Cursor & Windsurf read directly from the VS Code Marketplace, so a single listing covers all three.
 
 ### 1 · Marketplace *(recommended)*
+
+For easiest installation of the theme, you can access it directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=connorengland.fusion-health).
+
+Or, from inside your favorite editor, do the following:
 
 1. Press **⌘ Shift X** / **Ctrl Shift X**.
 2. Search for **“Fusion Health”** (identifier `connorengland.fusion-health`) and click **Install**.
