@@ -23,7 +23,7 @@ Publish it once to the VS Code Marketplace and it works instantly in Cursor and 
 
 ## 📦 Installation (all editors)
 
-> **Compatible with VS Code ≥ 1.90, Cursor ≥ 1.90, Windsurf ≥ 1.90.**\
+> **Compatible with VS Code ≥ 1.50, and all Cursor/Windsurf versions.**\
 > Cursor & Windsurf read directly from the VS Code Marketplace, so a single listing covers all three.
 
 ### 1 · Marketplace *(recommended)*
@@ -103,4 +103,3 @@ Restart the editor → **⌘K T / CtrlK T** → select *Fusion Dark* or *Fusio
 
 See [CHANGELOG.md](../CHANGELOG.md) for release notes.\
 Released under the **MIT License** by Fusion Health.
-
