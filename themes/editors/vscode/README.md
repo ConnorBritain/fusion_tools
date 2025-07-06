@@ -6,7 +6,7 @@
 Fusion Health Theme delivers a clinically‑calibrated **dark & light** colour pair.\
 Publish it once to the VS Code Marketplace and it works instantly in Cursor and Windsurf (both consume the same extension feed).
 
-Download the theme [here](https://marketplace.visualstudio.com/items?itemName=connorengland.fusion-health)!
+Download the theme [here](https://marketplace.visualstudio.com/items?itemName=connorengland.fusion-health).
 
 ---
 
@@ -45,30 +45,35 @@ Or, from inside your favorite editor, do the following:
 
 ### 2 · VSIX sideload
 
+After cloning the repository, navigate to the root directory of the project. The VSIX file should be in the project's root or release directory.
+
 ```bash
 # one file installs on every editor
-VSIX=fusion-health-1.1.1.vsix
-code     --install-extension $VSIX   # VS Code
+VSIX=path/to/fusion-health-1.1.1.vsix  # Update path as needed
+code     --install-extension $VSIX   # VS Code
 cursor   --install-extension $VSIX   # Cursor
 windsurf --install-extension $VSIX   # Windsurf
 ```
 
 ### 3 · Manual folder copy *(offline/portable)*
 
-Drop the extension folder into the editor’s **extensions directory**.
+Drop the extension folder into the editor's **extensions directory**. After cloning the repository, use these simple commands to copy the theme to your editor's extensions directory:
 
-| Editor   | macOS / Linux path        | Windows path                          |
+| Editor   | macOS / Linux path        | Windows path                          |
 | -------- | ------------------------- | ------------------------------------- |
-| VS Code  | `~/.vscode/extensions/`   | `%USERPROFILE%\.vscode\extensions\`   |
+| VS Code  | `~/.vscode/extensions/`   | `%USERPROFILE%\.vscode\extensions\`   |
 | Cursor   | `~/.cursor/extensions/`   | `%USERPROFILE%\.cursor\extensions\`   |
 | Windsurf | `~/.windsurf/extensions/` | `%USERPROFILE%\.windsurf\extensions\` |
 
 ```bash
-# example – VS Code on macOS/Linux
-EXT=~/.vscode/extensions/connorengland.fusion-health-1.1.1
-mkdir -p "$EXT"
-# assuming you cloned this repo
-cp -R themes/editors/vscode/* "$EXT"
+# VS Code on macOS/Linux
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.vscode/extensions/connorengland.fusion-health-1.1.1
+
+# Cursor on macOS/Linux
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.cursor/extensions/connorengland.fusion-health-1.1.1
+
+# Windsurf on macOS/Linux
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.windsurf/extensions/connorengland.fusion-health-1.1.1
 ```
 
 Restart the editor → **⌘K T / CtrlK T** → select *Fusion Dark* or *Fusion Light*.
