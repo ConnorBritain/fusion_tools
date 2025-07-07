@@ -47,46 +47,64 @@ Or, from inside your favorite editor, do the following:
 
 After cloning the repository, navigate to the root directory of the project. The VSIX file should be in the project's root or release directory.
 
+> **Windows Note**: On Windows, VSIX sideloading is the recommended method as manual folder copying does not work reliably. Extensions are automatically unpacked to `%APPDATA%\{Editor}\extensions\` after installation.
+
+For macOS/Linux:
+
 ```bash
 # one file installs on every editor
 VSIX=path/to/fusion-health-1.1.1.vsix  # Update path as needed
-code     --install-extension $VSIX   # VS Code
-cursor   --install-extension $VSIX   # Cursor
-windsurf --install-extension $VSIX   # Windsurf
+code     --install-extension "$VSIX"   # VS Code
+cursor   --install-extension "$VSIX"   # Cursor
+windsurf --install-extension "$VSIX"   # Windsurf
 ```
 
-### 3 · Manual folder copy *(offline/portable)*
+For Windows Command Prompt:
 
-Drop the extension folder into the editor's **extensions directory**. After cloning the repository, use these simple commands to copy the theme to your editor's extensions directory:
+```cmd
+:: Use full path with quotes to handle spaces properly
+code     --install-extension "C:\path\to\fusion-health-1.1.1.vsix"   
+cursor   --install-extension "C:\path\to\fusion-health-1.1.1.vsix"   
+windsurf --install-extension "C:\path\to\fusion-health-1.1.1.vsix"   
+```
 
-| Editor   | macOS / Linux path        | Windows path                          |
-| -------- | ------------------------- | ------------------------------------- |
-| VS Code  | `~/.vscode/extensions/`   | `%USERPROFILE%\.vscode\extensions\`   |
-| Cursor   | `~/.cursor/extensions/`   | `%USERPROFILE%\.cursor\extensions\`   |
-| Windsurf | `~/.windsurf/extensions/` | `%USERPROFILE%\.windsurf\extensions\` |
+For Windows PowerShell:
+
+```powershell
+# IMPORTANT: Use single quotes when setting variable, double quotes when using it
+$VSIX = 'C:\path\to\fusion-health-1.1.1.vsix'  # Single quotes for assignment
+code     --install-extension "$VSIX"   # Double quotes around variable
+cursor   --install-extension "$VSIX"   # Double quotes around variable  
+windsurf --install-extension "$VSIX"   # Double quotes around variable
+```
+
+**Verify installation**:
+```powershell
+# Check if extension was installed successfully
+windsurf --list-extensions | Select-String fusion
+```
+
+### 3 · Manual folder copy *(macOS/Linux only)*
+
+> **Important**: Manual folder copying only works reliably on macOS and Linux. **Windows users should use VSIX sideloading instead** (see method #2 above).
+
+Drop the extension folder into the editor's **extensions directory**. After cloning the repository, use these commands:
+
+| Editor   | macOS / Linux path        |
+| -------- | ------------------------- |
+| VS Code  | `~/.vscode/extensions/`   |
+| Cursor   | `~/.cursor/extensions/`   |
+| Windsurf | `~/.windsurf/extensions/` |
 
 ```bash
 # VS Code on macOS/Linux
-cp -r /path/to/fusion_tools/themes/editors/vscode ~/.vscode/extensions/fusion-health-1.1.1
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.vscode/extensions/connorengland.fusion-health-1.1.1
 
 # Cursor on macOS/Linux
-cp -r /path/to/fusion_tools/themes/editors/vscode ~/.cursor/extensions/fusion-health-1.1.1
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.cursor/extensions/connorengland.fusion-health-1.1.1
 
 # Windsurf on macOS/Linux
-cp -r /path/to/fusion_tools/themes/editors/vscode ~/.windsurf/extensions/fusion-health-1.1.1
-```
-
-For Windows users, use PowerShell:
-
-```powershell
-# VS Code on Windows
-Copy-Item -Recurse -Path C:\path\to\fusion_tools\themes\editors\vscode -Destination "$env:USERPROFILE\.vscode\extensions\fusion-health-1.1.1"
-
-# Cursor on Windows
-Copy-Item -Recurse -Path C:\path\to\fusion_tools\themes\editors\vscode -Destination "$env:USERPROFILE\.cursor\extensions\fusion-health-1.1.1"
-
-# Windsurf on Windows
-Copy-Item -Recurse -Path C:\path\to\fusion_tools\themes\editors\vscode -Destination "$env:USERPROFILE\.windsurf\extensions\fusion-health-1.1.1"
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.windsurf/extensions/connorengland.fusion-health-1.1.1
 ```
 
 Restart the editor → **⌘K T / CtrlK T** → select *Fusion Dark* or *Fusion Light*.
