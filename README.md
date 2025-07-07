@@ -4,7 +4,7 @@
 
 ---
 
-## 🗂️ Directory overview (post‑1.1 re‑org)
+## 🗂️ Directory overview
 
 ```
 repo‑root/
@@ -19,9 +19,6 @@ repo‑root/
 ├─ docs/                    # longer how‑tos & architecture notes (Markdown)
 └─ .github/                 # Actions CI – lint JSON, validate CSS, build .vsix
 ```
-
-> *Why collapse Cursor & Windsurf folders?*\
-> Both editors pull directly from the **VS Code Marketplace**. Publishing a single extension (`connorengland.fusion-health-theme`) now covers all three environments, so separate packages added clutter without adding value.
 
 ---
 

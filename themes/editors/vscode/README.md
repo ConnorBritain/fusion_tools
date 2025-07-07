@@ -67,13 +67,26 @@ Drop the extension folder into the editor's **extensions directory**. After clon
 
 ```bash
 # VS Code on macOS/Linux
-cp -r /path/to/fusion_tools/themes/editors/vscode ~/.vscode/extensions/connorengland.fusion-health-1.1.1
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.vscode/extensions/fusion-health-1.1.1
 
 # Cursor on macOS/Linux
-cp -r /path/to/fusion_tools/themes/editors/vscode ~/.cursor/extensions/connorengland.fusion-health-1.1.1
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.cursor/extensions/fusion-health-1.1.1
 
 # Windsurf on macOS/Linux
-cp -r /path/to/fusion_tools/themes/editors/vscode ~/.windsurf/extensions/connorengland.fusion-health-1.1.1
+cp -r /path/to/fusion_tools/themes/editors/vscode ~/.windsurf/extensions/fusion-health-1.1.1
+```
+
+For Windows users, use PowerShell:
+
+```powershell
+# VS Code on Windows
+Copy-Item -Recurse -Path C:\path\to\fusion_tools\themes\editors\vscode -Destination "$env:USERPROFILE\.vscode\extensions\fusion-health-1.1.1"
+
+# Cursor on Windows
+Copy-Item -Recurse -Path C:\path\to\fusion_tools\themes\editors\vscode -Destination "$env:USERPROFILE\.cursor\extensions\fusion-health-1.1.1"
+
+# Windsurf on Windows
+Copy-Item -Recurse -Path C:\path\to\fusion_tools\themes\editors\vscode -Destination "$env:USERPROFILE\.windsurf\extensions\fusion-health-1.1.1"
 ```
 
 Restart the editor → **⌘K T / CtrlK T** → select *Fusion Dark* or *Fusion Light*.
