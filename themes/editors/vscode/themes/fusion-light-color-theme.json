@@ -482,6 +482,7 @@
      Aligned with the 8-color TextMate token strategy above
      ═══════════════════════════════════════════════════════════════════════════ */
   "semanticTokenColors": {
+
     /* Language Structure - Vibrant Orange */
     "keyword":                          "#E05D00",
     "modifier":                         "#E05D00",
@@ -521,5 +522,12 @@
     /* Special cases */
     "operator":                         "#006064",
     "invalid":                          "#D73027"
-  }
+  },
+
+  /* ── Git decorations ───────────────────────────────────────── */
+  "gitDecoration.modifiedResourceForeground": "#E78629",
+  "gitDecoration.addedResourceForeground":    "#2B88D8",
+  "gitDecoration.deletedResourceForeground":  "#D73027",
+  "gitDecoration.untrackedResourceForeground": "#218041",
+  "gitDecoration.ignoredResourceForeground":   "#8A9BAC"
 }

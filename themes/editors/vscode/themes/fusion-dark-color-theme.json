@@ -526,6 +526,7 @@
 
   /* ── Semantic token overrides ─────────────────────────────── */
   "semanticTokenColors": {
+
     /* Language Structure - Fusion Orange */
     "keyword":                          "#FE9D26",
     "modifier":                         "#FE9D26",
@@ -566,7 +567,9 @@
   },
 
   /* ── Git decorations ───────────────────────────────────────── */
-  "gitDecoration.modifiedResourceForeground": "#FE9D26",
-  "gitDecoration.addedResourceForeground":    "#6AAFE7",
-  "gitDecoration.deletedResourceForeground":  "#FF4F4F"
+  "gitDecoration.modifiedResourceForeground":  "#FE9D26",
+  "gitDecoration.addedResourceForeground":     "#6AAFE7",
+  "gitDecoration.deletedResourceForeground":   "#FF4F4F",
+  "gitDecoration.untrackedResourceForeground": "#5FD687",
+  "gitDecoration.ignoredResourceForeground":   "#9BB6CF"
 }
