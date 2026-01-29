@@ -2,7 +2,7 @@
   "name": "fusion-health",
   "displayName": "Fusion Health Theme",
   "description": "Fusion Health–inspired dark & light colour themes for VS Code-based editors",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "connorengland",
   "icon": "icon.png",
   "galleryBanner": {

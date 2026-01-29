@@ -6,9 +6,9 @@
 
   /*  ────────────────────────────────────────────────────────────────────────────
     Fusion Light VS Code Theme
-    © 2025 Fusion Health | FusionEHR.com
+    2025 Fusion Health | FusionEHR.com
     Author: Connor England, Technical Engineer
-    Version: 1.1.1
+    Version: 1.1.2
 
     Distributed under the MIT License. You are free to copy, modify, and
     redistribute this file within or outside Fusion Health. All Fusion Health,
@@ -72,6 +72,11 @@
     "panel.border":                            "#E0E0E0",
     "peekView.border":                         "#E78629",
     "peekViewResult.background":               "#FFFFFF",
+    "peekViewResult.fileForeground":            "#084C76",
+    "peekViewResult.lineForeground":            "#084C76",
+    "peekViewResult.selectionForeground":       "#084C76",
+    "peekViewTitleLabel.foreground":            "#084C76",
+    "peekViewTitleDescription.foreground":      "#8A9BAC",
     "peekViewEditor.matchHighlightBackground": "#E786293D",
 
     /* ─── Controls / misc ─────────────────────────────────────── */
