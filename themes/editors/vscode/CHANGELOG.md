@@ -4,6 +4,16 @@ _All notable changes to **Fusion Themes** are documented here. The project follo
 
 ---
 
+## [1.2.0] - 2026-02-26
+
+### Theme Maturation (Top 10 Languages & Infrastructure)
+- **Top 10 Languages**: Comprehensive multi-lingual support expanding textmate scopes across Java, Go, PHP, Ruby, and JavaScript. Added specialized granular colors for decorators, type parameters, interface/class splits, standard library functions, magic python methods, go channels, rust lifetimes, and ruby symbols.
+- **Infrastructure & Config Scripts**: Specialized targeting for Dockerfiles, YAML files, Terraform blocks, SQL execution streams, and shell/bash interpolated commands.
+- **Full Lifecycle Workflows**: Enhanced styling for Makefiles, `.env`, INI/TOML configuration headers, XML structures, and Log/Git diff streams natively.
+- **Internal Maintenance**: Internal grammar cleanup mapping abstract syntax trees purely to the semantic core (Lavender, Mint, Beige, Salmon, Teal).
+
+---
+
 ## [1.1.1] – 2025‑07‑06
 
 ### Fusion Dark
